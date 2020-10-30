@@ -1,5 +1,23 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import CharacterPage from './character/CharacterPage'
+
+
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+
+    <>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={CharacterPage} />
+      </Switch>
+    </Router>
+
+    </>
+  );
 }
