@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Character.css';
 
 const Character = ({ name, image, quote, role }) =>(
-  <div>
+  <div className={styles.Character}>
     <p>{name}</p>
     <img src={image} />
     <p>{quote}</p>

@@ -6,21 +6,21 @@ export const getCharacters = () => {
 
   }
 
+export const postCharacter = character => {
 
-  // export const  getCharacters = async () =>{
-  //   const res = await fetch(`${URL}/api/v1/characters`);
-  //   const json = await res.json();
-  //   console.log(json)
-    
-   
   
-  //   return json.map(character => ({
-  //     id: character.id,
-  //     name: character.name,
-  //     image: character.image,
-  //     quote: character.quote,
-  //     role: character.role
-      
-  //   }));
-    
-  // };
+  return fetch(`${URL}/api/v1/characters`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(character),
+  })
+    .then(res => res.json());
+};
+
+export const getById = id => {
+
+  return fetch(`${URL}/api/v1/characters/${id}`)
+  .then(res => res.json())
+}
+
+

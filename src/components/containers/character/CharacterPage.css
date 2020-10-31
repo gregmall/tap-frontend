@@ -1,0 +1,17 @@
+.display{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin: 10px;
+  font-family:fantasy;
+}
+
+.item{
+  padding: 0 10px;
+  list-style: none;
+  
+}
+img{
+  width: 300px;
+  height: auto;
+}
