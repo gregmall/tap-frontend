@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NewCharacterForm from './NewCharacterForm';
+import CharacterForm from '../../controls/CharacterForm';
 import  { postCharacter }  from '../../../services/character-api';
 
 
@@ -15,7 +15,7 @@ export default class NewCharacter extends Component {
     this.setState({ [target.name]: target.value });
   };
 
-  handleSubmit =(e) => {
+  handleClick =(e) => {
     e.preventDefault();
     const character = {
       name: this.state.name,
@@ -34,20 +34,20 @@ export default class NewCharacter extends Component {
       const { name, image, quote, role } = this.state
 return (
 
-  <>
-    <NewCharacterForm
+  <div>
+    <CharacterForm
       name= {name}
       image= {image}
       quote= {quote}
       role={role}
       onChange={this.handleChange}
-      onSubmit={this.handleSubmit}
+     
       />
-  </>
-)
-  
+      <button onClick ={this.handleClick}>CREATE NEW CHARACTER</button>
 
- 
+      
+</div>
+)
 };
   
 };

@@ -23,4 +23,15 @@ export const getById = id => {
   .then(res => res.json())
 }
 
-
+export const updateById = (id, character) => {
+  console.log(id, character)
+  return fetch(`${URL}/api/v1/characters/${id}`,{
+  method: 'PUT',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(character),
+})
+  .then(res => res.json())
+  
+  
+  
+}

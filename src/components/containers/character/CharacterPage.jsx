@@ -5,7 +5,7 @@ import { useCharacters } from '../../hooks/characters';
 import styles from './CharacterPage.css';
 
 
-const CharacterList = () => {
+const CharacterPage = () => {
   
  const { characters, loading }= useCharacters();
  if(loading) return <span><img src="http://cdn.lowgif.com/full/ff8280aafe27319d-ajax-loading-gif-transparent-background-2-gif-images.gif"/></span>
@@ -30,4 +30,4 @@ const CharacterList = () => {
 )
 
 }
-export default CharacterList;
+export default CharacterPage;

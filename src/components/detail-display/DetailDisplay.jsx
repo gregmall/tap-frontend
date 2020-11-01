@@ -1,7 +1,7 @@
 import React from 'react';
 import { useById } from '../hooks/characters'
 import { useParams } from 'react-router-dom';
-import UpdateCharacter from '../containers/update/UpdateCharacter';
+
 import { Link } from 'react-router-dom';
 
 const DetailDisplay = () => {
@@ -16,9 +16,8 @@ const DetailDisplay = () => {
       <h2>{character.role}</h2>
       <p>"{character.quote}"</p>
       <a href="/"><button>GO BACK</button></a>
-      <Link to ={`/update/${character.id}`}><button>press to update</button>
-        <UpdateCharacter {...character} />
-      </Link>
+      <Link to={`/update/${id}`}><button>Update</button></Link>
+     
       
     </div>
   )
