@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import styles from './Header.css';
 const Header = () => {
 
@@ -9,11 +9,11 @@ const Header = () => {
       <div>
       <img src="public/assets/sizedlogo.jpg"/>
       </div>
-      <div>
+      <div className={styles.character}>
         <a href="/"><button>LIST CHARACTERS</button></a>
       
       </div>
-      <div>
+      <div className={styles.add}>
         <a href="/newcharacter"><button>ADD CHARACTER</button></a>
       </div>
 

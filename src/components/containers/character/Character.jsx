@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Character.css';
 
-const Character = ({ name, image, quote, role }) =>(
+const Character = ({ name, image, role }) =>(
   <div className={styles.Character}>
     <p>{name}</p>
     <img src={image} />
-    <p>{quote}</p>
     <p>{role}</p>
   </div>
 
@@ -14,7 +13,6 @@ const Character = ({ name, image, quote, role }) =>(
 Character.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  quote: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired
 };
 

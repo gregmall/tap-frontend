@@ -1,6 +1,9 @@
 .app{
   margin: 0;
   background-image: url("/Users/gregmall/alchemy/career-track/tap-frontend/public/assets/tapgroup.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   min-height: 100vh;
 
 }

@@ -12,7 +12,6 @@ exports[`Character component renders Character component 1`] = `
       src="www.rock.com"
     />
     <p />
-    <p />
   </div>
 </DocumentFragment>
 `;

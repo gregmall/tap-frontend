@@ -1,7 +1,6 @@
 import React from 'react';
 import { useById } from '../hooks/characters'
 import { useParams } from 'react-router-dom';
-import { deleteCharacter } from '../../services/character-api'
 import { Link } from 'react-router-dom';
 
 const DetailDisplay = () => {
