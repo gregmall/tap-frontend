@@ -5,9 +5,11 @@ exports[`Character component renders Character component 1`] = `
   <div
     class="Character"
   >
-    <p>
+    <p />
+    <h2>
       Nigel
-    </p>
+    </h2>
+    <p />
     <img
       src="www.rock.com"
     />
