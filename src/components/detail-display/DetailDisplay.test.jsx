@@ -25,6 +25,7 @@ describe('DetailDisplay component', () => {
     return waitFor(() => {
       screen.getByText('Name: Ian Faith');
       screen.getByAltText('Ian Faith');
+      screen.getByText('Role: Manager');
       
       
     });
