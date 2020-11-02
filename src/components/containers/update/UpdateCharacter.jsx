@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CharacterForm from '../../controls/CharacterForm';
-import  { getById, updateById }  from '../../../services/character-api';
-import { useParams } from 'react-router-dom';
+import  { getById, updateById, deleteCharacter }  from '../../../services/character-api';
+
 
 
 export default class UpdateCharacter extends Component {
@@ -42,8 +42,19 @@ export default class UpdateCharacter extends Component {
       quote: this.state.quote,
       role: this.state.role
     })
+    this.props.history.push('/');
 
     }
+       handleDelete = async () => {
+        const id = this.props.match.params.id;
+    if (window.confirm('Do you really want to delete this character?')) { 
+        await deleteCharacter(id);
+        this.props.history.push('/');
+      }
+      
+      this.props.history.push('/');
+
+       }
     render(){
       const { name, image, quote, role } = this.state
 return (
@@ -58,6 +69,7 @@ return (
       
       />
       <button onClick={this.handleClick}>UPDATE CHARACTER! </button>
+      <button onClick={this.handleDelete} >DELETE CHARACTER</button>
   </div>
 )
   

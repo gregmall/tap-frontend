@@ -5,7 +5,7 @@ const Header = () => {
 
 
   return (
-    <header className={styles.header}>
+    <header className={styles.Header}>
       <div>
       <img src="public/assets/sizedlogo.jpg"/>
       </div>

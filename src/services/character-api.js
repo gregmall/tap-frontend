@@ -33,5 +33,14 @@ export const updateById = (id, character) => {
   .then(res => res.json())
   
   
-  
 }
+
+export const deleteCharacter = id => {
+  return fetch(`${URL}/api/v1/characters/${id}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' }
+  })
+  .then(res => res.json())
+}
+
+

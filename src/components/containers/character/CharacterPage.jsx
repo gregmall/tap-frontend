@@ -5,6 +5,7 @@ import { useCharacters } from '../../hooks/characters';
 import styles from './CharacterPage.css';
 
 
+
 const CharacterPage = () => {
   
  const { characters, loading }= useCharacters();

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getCharacters, getById } from '../../services/character-api';
+import { getCharacters, getById, deleteCharacter } from '../../services/character-api';
 
 export const useCharacters = page => {
   const [loading, setLoading] = useState(true);
@@ -35,4 +35,5 @@ export const useById = id => {
     loading,
     character
   };
+
 };

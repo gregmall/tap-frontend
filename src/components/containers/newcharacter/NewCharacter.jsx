@@ -23,13 +23,11 @@ export default class NewCharacter extends Component {
       quote: this.state.quote,
       role: this.state.role
     }
-    console.log(character)
+   
     postCharacter(character)
-      .then(res=> console.log(res));
-
-    
-
-    }
+    .then(this.props.history.push('/'))
+      
+  }
     render(){
       const { name, image, quote, role } = this.state
 return (
