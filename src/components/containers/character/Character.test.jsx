@@ -5,7 +5,7 @@ import Character from './Character';
 
 describe('Character component', () => {
   it('renders Character component', () => {
-    const { asFragment } = render(<Character name="Nigel" image="www.rock.com" />);
+    const { asFragment } = render(<Character name="Nigel" image="www.rock.com" role="Guitar" />);
 
     expect(asFragment()).toMatchSnapshot();
   });
