@@ -1,6 +1,6 @@
 Header {
   background-color: black;
-  height: 95px;
+  height: 100px;
   width: 100%;
   
   display: flex;
@@ -12,6 +12,9 @@ Header {
     width: 175px;
     height: auto;
   }
+  button{
+    
+  }
 }
 .character{
   width: 75px;
@@ -20,6 +23,7 @@ Header {
 }
 
 .add{
-  width: 65px;
+  height: 95px;
+  width: auto;
   margin: 50px;
 }

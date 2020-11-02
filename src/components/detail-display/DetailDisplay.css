@@ -1,0 +1,29 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+
+}
+
+.detail{
+  
+  padding:  10px;
+  list-style: none;
+  border-radius: 8px;
+  margin: 5px;
+  width: 300px;
+  height: auto;
+  background-color: white;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  button{
+    padding:5px;
+    margin: 5px;
+
+  }
+  
+  
+}

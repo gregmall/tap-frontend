@@ -4,7 +4,7 @@ import styles from './Character.css';
 
 const Character = ({ name, image, role }) =>(
   <div className={styles.Character}>
-    <p>{name}</p>
+    <p><h2>{name}</h2></p>
     <img src={image} />
     <p>{role}</p>
   </div>
