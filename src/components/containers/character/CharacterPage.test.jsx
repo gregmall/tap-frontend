@@ -30,4 +30,5 @@ describe('Character Page component', () => {
     expect(asFragment()).toMatchSnapshot();
 
   });
+  
 });
