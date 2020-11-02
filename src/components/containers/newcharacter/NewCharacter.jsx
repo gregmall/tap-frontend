@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CharacterForm from '../../controls/CharacterForm';
 import  { postCharacter }  from '../../../services/character-api';
+import styles from './NewCharacter.css'
 
 
 export default class NewCharacter extends Component {
@@ -32,7 +33,7 @@ export default class NewCharacter extends Component {
       const { name, image, quote, role } = this.state
 return (
 
-  <div>
+  <div className={styles.create}>
     <CharacterForm
       name= {name}
       image= {image}
@@ -41,7 +42,9 @@ return (
       onChange={this.handleChange}
      
       />
-      <button onClick ={this.handleClick}>CREATE NEW CHARACTER</button>
+      <div className={styles.buttons}>
+        <button onClick ={this.handleClick}>CREATE NEW CHARACTER</button>
+      </div>
 
       
 </div>

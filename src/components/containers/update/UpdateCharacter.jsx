@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CharacterForm from '../../controls/CharacterForm';
 import  { getById, updateById, deleteCharacter }  from '../../../services/character-api';
+import styles from './UpdateCharacter.css';
 
 
 
@@ -59,7 +60,7 @@ export default class UpdateCharacter extends Component {
       const { name, image, quote, role } = this.state
 return (
 
-  <div>
+  <div className={styles.update}>
     <CharacterForm
       name= {name}
       image= {image}
@@ -68,8 +69,10 @@ return (
       onChange={this.handleChange}
       
       />
-      <button onClick={this.handleClick}>UPDATE CHARACTER! </button>
-      <button onClick={this.handleDelete} >DELETE CHARACTER</button>
+      <div className = {styles.buttons}>
+        <button onClick={this.handleClick}>UPDATE CHARACTER! </button>
+        <button onClick={this.handleDelete} >DELETE CHARACTER</button>
+      </div>
   </div>
 )
   
