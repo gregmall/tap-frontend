@@ -1,4 +1,4 @@
-const URL = process.env.REACT_APP_API_URL;
+const URL = REACT_APP_API_URL;
 
 export const getCharacters = () => {
   return fetch(`${URL}/api/v1/characters`)
