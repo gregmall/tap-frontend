@@ -5,7 +5,7 @@
 
 import { useState } from 'react';
 import {  useSelector } from 'react-redux';
-import { Link, useParams, useHistory } from 'react-router-dom';
+import {  useParams, useHistory } from 'react-router-dom';
 
 import { updateById } from '../../../services/character-api';
 
@@ -77,7 +77,7 @@ return (
             <input id="role"
               type="text"
               name="role" value={role}
-              placeHolder={role}
+              placeholder={role}
               onChange={handleChange} />
        
       
