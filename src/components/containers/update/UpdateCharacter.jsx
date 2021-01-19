@@ -1,83 +1,101 @@
-import React, { Component } from 'react';
-import CharacterForm from '../../controls/CharacterForm';
-import  { getById, updateById, deleteCharacter }  from '../../../services/character-api';
-import styles from './UpdateCharacter.css';
+ import React, { Component } from 'react';
+ 
+
+ import styles from './UpdateCharacter.css';
+
+import { useState } from 'react';
+import {  useSelector } from 'react-redux';
+import { Link, useParams, useHistory } from 'react-router-dom';
+
+import { updateById } from '../../../services/character-api';
 
 
 
-export default class UpdateCharacter extends Component {
-  state = {
-    id: '',
-    name: '',
-    image: '',
-    quote: '',
-    role: '',
+
+ const UpdateCharacter = () => {
+  const { id } = useParams();
+  const history = useHistory();
+
+  const detail = useSelector(state => state.character.detail);
+  console.log(detail)
+  const [name, setName] = useState('');
+  const [image, setImage] = useState('');
+  const [quote, setQuote] = useState('');
+  const [role, setRole] = useState('');
+
+  const handleChange = ({ target }) => {
+    if(target.name ==='name') setName(target.value);
+    if(target.name ==='image') setImage(target.value);
+    if(target.name ==='quote') setQuote(target.value);
+    if(target.name ==='role') setRole(target.value);
 
   }
-
-  async componentDidMount() {
-    const id = this.props.match.params.id
-    const character = await getById(id)
-    console.log(id)
-
-    this.setState({
-      id: character.id,
-      name: character.name,
-      image: character.image,
-      quote: character.quote,
-      role: character.role
+  const handleClick= e => {
+    e.preventDefault();
+    updateById(id, {
+      name: name,
+      image: image,
+      quote: quote,
+      role: role
     })
+    history.push('/')
   }
-  handleChange = ({ target }) => {
-    
-    this.setState({ [target.name]: target.value });
-  };
 
-  handleClick = (e) => {
-   e.preventDefault();
-   console.log(this.state.name)
-   console.log(this.state.id)
-     updateById(this.state.id, {
-      name: this.state.name,
-      image: this.state.image,
-      quote: this.state.quote,
-      role: this.state.role
-    })
-    this.props.history.push('/');
 
-    }
-       handleDelete = async () => {
-        const id = this.props.match.params.id;
-    if (window.confirm('Do you really want to delete this character?')) { 
-        await deleteCharacter(id);
-        this.props.history.push('/');
-      }
-      
-      this.props.history.push('/');
 
-       }
-    render(){
-      const { name, image, quote, role } = this.state
 return (
 
   <div className={styles.update}>
-    <CharacterForm
-      name= {name}
-      image= {image}
-      quote= {quote}
-      role={role}
-      onChange={this.handleChange}
+<div className={styles.page}>
+        <div className={styles.form}>
+        <div className={styles.form}>
+          <section className={styles.section}>
+            <form onSubmit={handleClick}>
+            <label htmlFor="name">Name: </label>
+            <input id="name"
+              type="text"
+              name="name"
+              value={name}
+              placeHolder={name}
+              onChange={handleChange} /><br />
+            <label htmlFor="image">Image Url: </label>
+            <input id="image"
+              type="text"
+              name="image" value={image}
+              placeHolder={image}
+              onChange={handleChange} /><br />
+            <label htmlFor="quote">Quote: </label>
+            <textarea
+              placeHolder="Enter quote here"
+              id="quote"
+              type="textarea"
+              name="quote"
+              value={quote}
+              placeHolder={quote}
+              onChange={handleChange} /><br />
+            <label htmlFor="role">Role: </label>
+            <input id="role"
+              type="text"
+              name="role" value={role}
+              placeHolder={role}
+              onChange={handleChange} />
+       
       
-      />
-      <div className = {styles.buttons}>
-        <button onClick={this.handleClick}>UPDATE CHARACTER! </button>
-        <button onClick={this.handleDelete} >DELETE CHARACTER</button>
+      
+        <button>UPDATE</button>
+      
+      </form>
+      </section>
       </div>
-  </div>
+      </div>
+        </div>
+        </div>
+
 )
   
 
  
 };
   
-};
+
+export default UpdateCharacter;

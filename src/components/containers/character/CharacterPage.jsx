@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { fetchCharacters } from '../../../actions/characterActions';
 import Character from './Character';
 import { useCharacters } from '../../hooks/characters';
 import styles from './CharacterPage.css';
