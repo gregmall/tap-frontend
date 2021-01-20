@@ -24,10 +24,10 @@ export default function App() {
         <Router>
           <Header />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/characterlist" component={CharacterPage} />
-            <Route exact path ="/newcharacter" component= {NewCharacter} />
-            <Route exact path ="/detail/:id" component ={Detail} />
+            <Route exact path= "/" component={Home} />
+            <Route exact path= "/characterlist" component={CharacterPage} />
+            <Route exact path = "/newcharacter" component= {NewCharacter} />
+            <Route exact path = "/detail/:id" component ={Detail} />
             <Route exact path = "/update/:id" component={UpdateCharacter} />
             
             
