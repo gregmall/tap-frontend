@@ -12,6 +12,7 @@ import UpdateCharacter from '../containers/update/UpdateCharacter';
 import { Provider } from 'react-redux';
 import store from '../../store'
 import styles from './App.css';
+import Home from '../containers/home/Home';
 
 
 export default function App() {
@@ -23,7 +24,8 @@ export default function App() {
         <Router>
           <Header />
           <Switch>
-            <Route exact path="/" component={CharacterPage} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/characterlist" component={CharacterPage} />
             <Route exact path ="/newcharacter" component= {NewCharacter} />
             <Route exact path ="/detail/:id" component ={Detail} />
             <Route exact path = "/update/:id" component={UpdateCharacter} />

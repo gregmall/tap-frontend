@@ -1,0 +1,9 @@
+.Home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'News Cycle', sans-serif;
+  padding-left: 140px;
+  
+}
