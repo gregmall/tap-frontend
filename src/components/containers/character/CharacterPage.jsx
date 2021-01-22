@@ -10,12 +10,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 const CharacterPage = () => {
-  const characters= useSelector(state => state.character.characters);
+  // const characters= useSelector(state => state.character.characters);
   const dispatch = useDispatch();
-  
-  useEffect(() =>{
-    dispatch(fetchCharacters());
-  }, []);
+  const { loading, characters } = useCharacters();
+
+  if(loading) return <span><img src="http://cdn.lowgif.com/full/ff8280aafe27319d-ajax-loading-gif-transparent-background-2-gif-images.gif"/></span>
+
 
  
     
