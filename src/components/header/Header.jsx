@@ -22,6 +22,9 @@ const Header = () => {
         <a href="/newcharacter"><button>ADD CHARACTER</button></a>
       
       </div>
+      <div className={styles.twitter}>
+        <a href="https://twitter.com/SpinalT79406108" target = "blank"><img src="https://cdn3.iconfinder.com/data/icons/social-media-circle/512/circle-twitter-512.png" /><br/>TapBot on Twitter</a>
+      </div>
 
 
 

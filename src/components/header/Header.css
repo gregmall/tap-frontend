@@ -27,3 +27,12 @@ Header {
   width: auto;
   margin: 50px;
 }
+.twitter{
+  img{
+    width:75px;
+  }
+  a{
+    color:white;
+    text-decoration: none;
+  }
+}
