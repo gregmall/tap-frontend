@@ -30,7 +30,7 @@ const NewCharacter = () => {
   
       }));
       alert('New character added! ! Refresh page to see new character!');
-      history.push('/');
+      history.push('/characterlist');
       setName('');
       setImage('');
       setQuote('');

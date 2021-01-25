@@ -29,16 +29,16 @@ const DetailDisplay = () => {
 
   return(
     <div className={styles.page}>
-      <div className = {styles.detail}>
+      <section className = {styles.detail}>
         <h1>Name: {detail.name}</h1>
         <img src={detail.image} alt={detail.name}/>
         <h2>Role: {detail.role}</h2>
         <p>Quote: "{detail.quote}"</p>
-        <a href="/"><button>GO BACK</button></a>
+        <Link to ={"/characterlist"}><button>GO BACK</button></Link>
       
         <Link to={`/update/${id}`}><button>Update</button></Link>
-        {/* <button value ={detail.id} onClick={handleDelete}>DELETE CHARACTER</button> */}
-      </div>
+
+      </section>
     </div>
   )
 

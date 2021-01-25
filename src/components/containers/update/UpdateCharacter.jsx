@@ -38,7 +38,7 @@ import { updateById } from '../../../services/character-api';
       quote: quote,
       role: role
     })
-    history.push('/')
+    history.push('/characterlist')
   }
 
 
@@ -56,13 +56,13 @@ return (
               type="text"
               name="name"
               value={name}
-              placeHolder={name}
+              placeHolder={detail.name}
               onChange={handleChange} /><br />
             <label htmlFor="image">Image Url: </label>
             <input id="image"
               type="text"
               name="image" value={image}
-              placeHolder={image}
+              placeHolder={detail.image}
               onChange={handleChange} /><br />
             <label htmlFor="quote">Quote: </label>
             <textarea
@@ -71,13 +71,13 @@ return (
               type="textarea"
               name="quote"
               value={quote}
-              placeHolder={quote}
+              placeHolder={detail.quote}
               onChange={handleChange} /><br />
             <label htmlFor="role">Role: </label>
             <input id="role"
               type="text"
               name="role" value={role}
-              placeholder={role}
+              placeholder={detail.role}
               onChange={handleChange} />
        
       
