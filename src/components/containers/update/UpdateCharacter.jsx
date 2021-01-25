@@ -5,7 +5,7 @@
 
 import { useState } from 'react';
 import {  useSelector } from 'react-redux';
-import {  useParams, useHistory } from 'react-router-dom';
+import {  useParams, useHistory, Link } from 'react-router-dom';
 
 import { updateById } from '../../../services/character-api';
 
@@ -83,8 +83,9 @@ return (
       
       
         <button>UPDATE</button>
-      
+        <Link to ={"/characterlist"}><button>GO BACK</button></Link>
       </form>
+      
       </section>
       </div>
       </div>
