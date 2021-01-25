@@ -37,7 +37,7 @@ const DetailDisplay = () => {
         <a href="/"><button>GO BACK</button></a>
       
         <Link to={`/update/${id}`}><button>Update</button></Link>
-        <button value ={detail.id} onClick={handleDelete}>DELETE CHARACTER</button>
+        {/* <button value ={detail.id} onClick={handleDelete}>DELETE CHARACTER</button> */}
       </div>
     </div>
   )

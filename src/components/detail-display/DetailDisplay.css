@@ -17,8 +17,10 @@
   height: auto;
   background-color: white;
   height: auto;
+ 
   align-items: center;
   justify-content: center;
+ 
   button{
     padding:5px;
     margin: 5px;
