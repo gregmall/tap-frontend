@@ -14,7 +14,7 @@ const CharacterPage = () => {
   const dispatch = useDispatch();
   const { loading, characters } = useCharacters();
 
-  if(loading) return <span><img src="http://cdn.lowgif.com/full/ff8280aafe27319d-ajax-loading-gif-transparent-background-2-gif-images.gif"/></span>
+  if(loading) return <span><img src="https://creativepool.com/files/candidate/portfolio/full/764187.gif"/></span>
 
 
  
