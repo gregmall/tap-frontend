@@ -22,14 +22,18 @@
   width: 400px;
   justify-content: center;;
   align-items: center;
+  
   button{
     padding: 5px;
-    margin: 5px;
+    margin: 15px;
   }
   img{
     border-radius: 6px;
     padding: 10px;
     background-color: aqua;
+  }
+  p{
+    margin: 15px;
   }
   
   

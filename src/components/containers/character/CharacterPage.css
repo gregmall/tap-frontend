@@ -3,7 +3,7 @@
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   margin: 10px;
-  font-family: 'Righteous', cursive;
+  text-decoration: none;
   align-items: center;
   p{
     text-align: center;
@@ -16,7 +16,9 @@
   border-radius: 8px;
   margin: 5px;
   width: 300px;
-  background-color: white;
+  background-color:black;
+  color: aqua;
+  text-decoration: none;
   height: auto;
   display: grid;
   align-items: center;
@@ -24,14 +26,17 @@
   
   text-decoration: none;
  
-  
-  
-  
-}
-img{
+  img{
   
     width: 200px;
     height: auto;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: aqua;
   
   
 }
+  
+  
+}
+
