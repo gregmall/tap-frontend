@@ -1,10 +1,10 @@
-const URL = process.env.REACT_APP_API_URL;
+const URL = 'https://pacific-peak-90767.herokuapp.com';
 
 export const getCharacters = () => {
   return fetch(`${URL}/api/v1/characters`)
-  .then(res => res.json())
+    .then(res => res.json());
 
-  }
+};
 
 export const postCharacter = character => {
 
@@ -20,27 +20,27 @@ export const postCharacter = character => {
 export const getById = id => {
 
   return fetch(`${URL}/api/v1/characters/${id}`)
-  .then(res => res.json())
-}
+    .then(res => res.json());
+};
 
 export const updateById = (id, character) => {
-  console.log(id, character)
+  console.log(id, character);
   return fetch(`${URL}/api/v1/characters/${id}`,{
-  method: 'PUT',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(character),
-})
-  .then(res => res.json())
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(character),
+  })
+    .then(res => res.json());
   
   
-}
+};
 
 export const deleteCharacter = id => {
   return fetch(`${URL}/api/v1/characters/${id}`, {
     method: 'DELETE',
     headers: { 'Content-Type': 'application/json' }
   })
-  .then(res => res.json())
-}
+    .then(res => res.json());
+};
 
 

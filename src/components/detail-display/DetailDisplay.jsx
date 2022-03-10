@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,39 +9,52 @@ import styles from './DetailDisplay.css';
 
 const DetailDisplay = () => {
 
-
+ 
   const { id } = useParams();
   const history = useHistory();
   const detail = useSelector(state => state.character.detail);
   
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchCharactersById(id))
-  }, []);
+    dispatch(fetchCharactersById(id));
+  }, [])
+  ;
 
   const handleDelete = ({ target }) => {
-    if (window.confirm('Do you really want to delete this character?')){
-    dispatch(removeCharacter(target.value));
-    history.push('/');
+    if(window.confirm('Do you really want to delete this character?')){
+      dispatch(removeCharacter(target.value));
+      history.push('/');
     }
     
    
   };
+  const speakQuote = (quote) => {
+    const words = quote;
+    const speak = (msg) => { 
+      const sp = new SpeechSynthesisUtterance(msg);
+      [sp.voice] = speechSynthesis.getVoices();
+      speechSynthesis.speak(sp);
+    };
 
-  return(
+    speak(words);
+
+  };
+
+  return (
+    
     <div className={styles.page}>
       <section className = {styles.detail}>
         <h1>Name: {detail.name}</h1>
         <img src={detail.image} alt={detail.name}/>
         <h2>Role: {detail.role}</h2>
-        <p>Quote: "{detail.quote}"</p>
-        <Link to ={"/characterlist"}><button>GO BACK</button></Link>
+        <p>Quote: "{detail.quote}" {speakQuote(detail.quote)}</p>
+        <Link to ={'/characterlist'}><button>GO BACK</button></Link>
       
-        <Link to={`/update/${id}`}><button>Update</button></Link>
+       
 
       </section>
     </div>
-  )
+  );
 
 };
 
