@@ -52,7 +52,7 @@ const DetailDisplay = () => {
         <img src={detail.image} alt={detail.name}/>
         <h2>Role: {detail.role}</h2>
         <p>Quote: "{detail.quote}" {speakQuote(detail.quote)}</p>
-        <Link to ={'/characterlist'}><button>GO BACK</button></Link>
+        
       
        
 
