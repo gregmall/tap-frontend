@@ -29,14 +29,18 @@ const DetailDisplay = () => {
    
   };
   const speakQuote = (quote) => {
-    const words = quote;
+
+    
     const speak = (msg) => { 
+      const voices = speechSynthesis.getVoices();
       const sp = new SpeechSynthesisUtterance(msg);
-      [sp.voice] = speechSynthesis.getVoices();
+      
+      sp.voice = voices[7];
       speechSynthesis.speak(sp);
     };
 
-    speak(words);
+    speak(quote);
+   
 
   };
 
