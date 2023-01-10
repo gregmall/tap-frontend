@@ -44,6 +44,7 @@ const DetailDisplay = () => {
     };
 
     speak(quote);
+    quote = '';
    
 
   };
