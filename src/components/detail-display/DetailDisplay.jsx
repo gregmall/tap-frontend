@@ -28,6 +28,10 @@ const DetailDisplay = () => {
     
    
   };
+  const routeChange = () =>{ 
+    let path = `/characterlist`; 
+    history.push(path);
+  }
   const speakQuote = (quote) => {
 
     
@@ -52,6 +56,7 @@ const DetailDisplay = () => {
         <img src={detail.image} alt={detail.name}/>
         <h2>Role: {detail.role}</h2>
         <p>Quote: "{detail.quote}" {speakQuote(detail.quote)}</p>
+        <button onClick={routeChange}>Close</button>
         
       
        
