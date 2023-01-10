@@ -1,4 +1,4 @@
-const URL = 'https://pacific-peak-90767.herokuapp.com';
+const URL = 'https://tap-backend.adaptable.app';
 
 export const getCharacters = () => {
   return fetch(`${URL}/api/v1/characters`)
