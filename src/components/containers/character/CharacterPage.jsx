@@ -14,31 +14,31 @@ const CharacterPage = () => {
   const dispatch = useDispatch();
   const { loading, characters } = useCharacters();
 
-  if(loading) return <span><img src="https://creativepool.com/files/candidate/portfolio/full/764187.gif"/></span>
+  if(loading) return <span>loading</span>;
 
 
  
     
- const characterElements = characters.map(character => (
-  <Link to = {`/detail/${character.id}`}>
-  <li li key={character.id} className={styles.item} >
+  const characterElements = characters.map(character => (
+    <Link to = {`/detail/${character.id}`}>
+      <li li key={character.id} className={styles.item} >
     
-  <p><h2>{character.name}</h2></p>
-    <img src={character.image} />
-    <p>{character.role}</p>
+        <p><h2>{character.name}</h2></p>
+        <img src={character.image} />
+        <p>{character.role}</p>
    
 
-  </li>
-  </Link>
+      </li>
+    </Link>
   
-));
+  ));
 
   return (
 
     <ul data-testid="characters" className={styles.display}>
-        {characterElements}
+      {characterElements}
     </ul> 
-)
+  );
 
-}
+};
 export default CharacterPage;
