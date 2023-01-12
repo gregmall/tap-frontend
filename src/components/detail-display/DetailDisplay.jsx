@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useEffect } from 'react';
@@ -28,10 +29,11 @@ const DetailDisplay = () => {
     
    
   };
-  const routeChange = () =>{ 
-    let path = `/characterlist`; 
+  const routeChange = () => { 
+    const path = '/characterlist'; 
     history.push(path);
-  }
+    location.reload();
+  };
   const speakQuote = (quote) => {
 
     
@@ -42,7 +44,7 @@ const DetailDisplay = () => {
       sp.voice = voices[7];
       speechSynthesis.speak(sp);
     };
-
+    
     speak(quote);
     quote = '';
    
