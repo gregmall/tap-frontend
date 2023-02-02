@@ -4,21 +4,25 @@
   justify-content: center;
   flex-direction: column;
   font-family: 'News Cycle', sans-serif;
-  padding-left: 140px;
-  color: aqua;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #8142f5
 
   
 }
 section {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  background-color: white;
 }
 Iframe{
   width: auto;
   height: auto;
   margin: 20px;
-  padding: 10px;
-  background-color: aqua;
+  padding: 5px;
+  background-color:#8142f5
   
 }

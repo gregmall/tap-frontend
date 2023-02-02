@@ -1,10 +1,14 @@
 .app{
   margin: 0;
-  background-image: url("http://www.trbimg.com/img-518bf025/turbine/la-et-ms-this-is-spinal-tap-lp-to-be-reissued--001/750/750x422");
+  /* background-image: url("http://www.trbimg.com/img-518bf025/turbine/la-et-ms-this-is-spinal-tap-lp-to-be-reissued--001/750/750x422"); */
+  background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   min-height: 100vh;
 
+}
+body {
+  margin: 0;
 }

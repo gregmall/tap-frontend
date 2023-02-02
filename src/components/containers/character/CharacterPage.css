@@ -17,9 +17,9 @@ p {
   list-style: none;
   border-radius: 8px;
   margin: 5px;
- 
-  background-color:black;
-  color: aqua;
+  border: 1px solid #8142f5;
+  background-color:white;
+  color: #8142f5;
   text-decoration: none;
   height: auto;
   display: grid;
@@ -37,8 +37,8 @@ p {
   width:15em;
   height:15em;
   border-radius: 6px;
-  padding: 10px;
-  background-color: aqua;
+  padding: 5px;
+  background-color: #8142f5
 
 
 }

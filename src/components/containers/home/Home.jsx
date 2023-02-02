@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className = {styles.Home}>
       <h1>WELCOME TO THE ONE OF THE LOUDEST PAGES ON THE INTERNET!</h1>
-      <p>This is a fan page for one of England's loudest bands.</p>
+      <p>How much more black could this page be and the answer is none more black</p>
       <section>
       
         <Iframe url="https://www.youtube.com/embed/YjC0vMIrOAk"
