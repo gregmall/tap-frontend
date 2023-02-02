@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCharactersById, removeCharacter } from '../../actions/characterActions';
 import { useParams, useHistory } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 import styles from './DetailDisplay.css';
 
 const DetailDisplay = () => {
@@ -41,7 +41,7 @@ const DetailDisplay = () => {
       const voices = speechSynthesis.getVoices();
       const sp = new SpeechSynthesisUtterance(msg);
       
-      sp.voice = voices[7];
+      sp.voice = voices[49];
       speechSynthesis.speak(sp);
     };
     

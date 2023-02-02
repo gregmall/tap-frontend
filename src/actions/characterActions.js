@@ -1,4 +1,9 @@
-import { getCharacters, getById, postCharacter, deleteCharacter } from '../services/character-api';
+import { 
+  getCharacters, 
+  getById, 
+  postCharacter, 
+  deleteCharacter 
+} from '../services/character-api';
 
 export const ADD_CHARACTER = 'ADD_CHARACTER';
 export const addCharacter = character => ({
@@ -28,32 +33,32 @@ export const DELETE_CHARACTER = 'DELETE_CHARACTER';
 
 export const createCharacter = character => dispatch => {
   postCharacter(character)
-  .then(createdCharacter => {
-    dispatch(addCharacter(createdCharacter));
-  });
+    .then(createdCharacter => {
+      dispatch(addCharacter(createdCharacter));
+    });
 };
 
 export const fetchCharacters = () => dispatch => {
   getCharacters()
-  .then(characters => {
-    dispatch(setCharacters(characters));
-  });
+    .then(characters => {
+      dispatch(setCharacters(characters));
+    });
 };
 
 export const fetchCharactersById = id => dispatch => {
   getById(id)
     .then(character => {
-      dispatch(setDetail(character))
+      dispatch(setDetail(character));
       
-    })
-  };
+    });
+};
 
 export const removeCharacter = id => dispatch => {
   deleteCharacter(id)
-  .then(character => {
-    dispatch({
-      type: DELETE_CHARACTER,
-      payload: character.id
+    .then(character => {
+      dispatch({
+        type: DELETE_CHARACTER,
+        payload: character.id
+      });
     });
-  });
 };

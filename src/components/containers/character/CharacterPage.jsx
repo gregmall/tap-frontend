@@ -1,34 +1,33 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable max-len */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import { fetchCharacters } from '../../../actions/characterActions';
-
+import Card from 'react-bootstrap/Card'
 import { useCharacters } from '../../hooks/characters';
 import styles from './CharacterPage.css';
-import { useDispatch, useSelector } from 'react-redux';
+
 
 
 
 const CharacterPage = () => {
-  // const characters= useSelector(state => state.character.characters);
-  const dispatch = useDispatch();
   const { loading, characters } = useCharacters();
 
-  if(loading) return <span>loading</span>;
+  if(loading) return <div style = {{ alignItems: 'center', justifyContent:'center' }}><img src = "public/assets/this-is-spinal-tap-pods.gif" /></div>;
 
 
- 
+
     
   const characterElements = characters.map(character => (
     <Link to = {`/detail/${character.id}`}>
-      <li li key={character.id} className={styles.item} >
-    
-        <p><h2>{character.name}</h2></p>
-        <img src={character.image} />
-        <p>{character.role}</p>
-   
 
-      </li>
+      <Card className={styles.card} >
+        <Card.Img variant="top" src={character.image} />
+        <Card.Body>
+          <Card.Title><h2>{character.name}</h2></Card.Title>
+          <Card.Text>{character.role}</Card.Text>
+        </Card.Body>
+      </Card>
+
     </Link>
   
   ));
