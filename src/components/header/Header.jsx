@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <div>
-      <img src="https://1.bp.blogspot.com/-tyXy-38pnlc/W6lE52y4XGI/AAAAAAAASyU/9id4EBCTI1ovbYDEvG0pvMkwnVgodEShwCLcBGAs/s1600/logo.jpg"/>
+      <img src="/assets/sizedlogo.jpg"/>
       </div>
       <div className={styles.character}>
         <a href="/characterlist"><button>CHARACTERS</button></a>
@@ -23,7 +23,7 @@ const Header = () => {
       
       </div>
       <div className={styles.twitter}>
-        <a href="https://twitter.com/SpinalT79406108" target = "blank"><br/><img src="https://cdn3.iconfinder.com/data/icons/social-media-circle/512/circle-twitter-512.png" /><br/></a>
+        <a href="https://twitter.com/SpinalT79406108" target = "blank"><br/><img src="/assets/1752359.png" /><br/></a>
       </div>
 
 
