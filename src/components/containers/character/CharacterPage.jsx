@@ -12,7 +12,7 @@ import styles from './CharacterPage.css';
 const CharacterPage = () => {
   const { loading, characters } = useCharacters();
 
-  if(loading) return <div style = {{ alignItems: 'center', justifyContent:'center' }}><img src = "https://media.tenor.com/qXzHf2tesO0AAAAC/loading-gif-steiness.gif" /></div>;
+  if(loading) return <div style = {{ alignItems: 'center', justifyContent:'center' }}><img src = "/assets/this-is-spinal-tap-pods.gif" /></div>;
 
 
 
