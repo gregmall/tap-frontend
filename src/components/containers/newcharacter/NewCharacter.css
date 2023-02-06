@@ -4,6 +4,9 @@
   button{
     margin: 5px;
   }
+  label{
+    color: black;
+  }
  
   
 }

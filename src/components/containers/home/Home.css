@@ -14,9 +14,10 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-radius: 5px;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: #010824;
 }
 Iframe{
   width: auto;

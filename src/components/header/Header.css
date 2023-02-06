@@ -2,9 +2,8 @@ Header {
   background-color: black;
   height: 100px;
   width: 100%;
-  
   display: flex;
-  justify-content: space-around;;
+  justify-content: space-around;
   flex-direction: row;
 
 
@@ -13,7 +12,7 @@ Header {
     height: auto;
   }
   button{
-    
+    background-color: red;
   }
 }
 .character{

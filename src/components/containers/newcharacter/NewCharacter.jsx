@@ -43,9 +43,11 @@ const NewCharacter = () => {
 
     <div className={styles.create}>
       <div className={styles.page}>
-        <div className={styles.form}>
+        <div >
           <section className={styles.section}>
-            <form onSubmit={handleClick}>
+            <form 
+              className={styles.form}
+              onSubmit={handleClick}>
               <label htmlFor="name">Name: </label>
               <input id="name"
                 type="text"
@@ -66,7 +68,7 @@ const NewCharacter = () => {
                 type="textarea"
                 name="quote"
                 value={quote}
-                placeHolder={quote}
+                
                 onChange={handleChange} /><br />
               <label htmlFor="role">Role: </label>
               <input id="role"
