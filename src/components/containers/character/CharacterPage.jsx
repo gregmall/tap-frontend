@@ -12,7 +12,7 @@ import styles from './CharacterPage.css';
 const CharacterPage = () => {
   const { loading, characters } = useCharacters();
 
-  if(loading) return <div style = {{ alignItems: 'center', justifyContent:'center' }}><img src = "/assets/this-is-spinal-tap-pods.gif" /></div>;
+  if(loading) return <div className={styles.loading}><img src = "/assets/this-is-spinal-tap-pods.gif" /></div>;
 
 
 
