@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <div>
-      <img src="/assets/sizedlogo.jpg"/>
+      <img src="/assets/logopng.png"/>
       </div>
       <div className={styles.character}>
         <a href="/characterlist"><button>CHARACTERS</button></a>
@@ -23,7 +23,7 @@ const Header = () => {
       
       </div>
       <div className={styles.twitter}>
-        <a href="https://twitter.com/SpinalT79406108" target = "blank"><br/><img src="/assets/1752359.png" /><br/></a>
+        <a href="https://twitter.com/SpinalT79406108" target = "blank"><br/><img src="/assets/twitter.png" /><br/></a>
       </div>
 
 
